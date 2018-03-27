@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Moby Dickens Book Store</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div th:include="layout :: head" />
+
+<section>
+    <h2>Add/Edit Book Page</h2>
+
+    <form th:action="@{/admin/books/edit}" method="post">
+
+        <div>
+            <label>Book Title: </label>
+            <input name="title" type="text" th:value="${title}" />
+        </div>
+
+        <div>
+            <label>Author: </label>
+            <input name="author" type="text" th:value="${author}" />
+        </div>
+
+        <div>
+            <label>Date Published: </label>
+            <input name="publishDate" type="text" th:value="${publishDate}" />
+        </div>
+
+        <div>
+            <label>Genre: </label>
+            <input name="genre" type="text" th:value="${genre}" />
+        </div>
+
+        <div>
+            <label>Book Price: </label>
+            <input name="bookPrice" type="text" th:value="${bookPrice}" />
+        </div>
+
+        <div>
+            <label>Book ISBN: </label>
+            <input name="iSBN" type="text" th:value="${iSBN}" />
+        </div>
+
+        <div>
+            <input name="bookId" th:value="${bookId}" type="hidden" />
+            <button>Edit Book</button>
+        </div>
+    </form>
+</section>
+
+<div th:include="layout :: foot" />
+
+</body>
+</html>

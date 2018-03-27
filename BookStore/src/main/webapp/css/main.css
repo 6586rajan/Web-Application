@@ -1,0 +1,108 @@
+* {
+    font-family: 'Tangerine', serif;
+}
+
+body div header h1 {
+    font-size: 70px;
+    text-align:center;
+    font-weight: bold;
+}
+
+h1 a {
+    color: seashell ;
+}
+
+p a {
+    color: seashell;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+section h2 {
+    font-size: 50px;
+    font-family: 'Pacifico',cursive;
+    color: aqua;
+}
+
+section p {
+    color: seashell;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+section a {
+    color: blue;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+li a {
+    font-size: 30px;
+    font-family: 'Pacifico',cursive;
+    color: aqua;
+}
+
+div input {
+    font-family: 'Times New Roman', Serif;
+    font-size: 20px;
+
+}
+
+tr th {
+    font-size: 30px;
+}
+
+tr td {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+div button {
+    font-size: 25px;
+    font-family: 'Macando Swash Caps', Serif;
+}
+body {
+    background-image: url(books.jpg);
+
+}
+
+body img {
+    opacity: .2;
+}
+form table {
+    background-color: #1f1f1f;
+    border: 1px solid #000000;
+    width: 95%;
+    margin: 10px auto 10px auto;
+}
+
+table td {
+    border: 1px solid #000000;
+
+}
+
+table tr th{
+    text-align: center;
+    color: blue;
+}
+
+cite {
+    font-size: 30px;
+    color: lawngreen;
+}
+form div {
+    clear: both;
+}
+
+form div label {
+    width: 35%;
+    display: block;
+    float: left;
+}
+
+form div input {
+    width: 50%;
+    display: block;
+    float: left;
+}

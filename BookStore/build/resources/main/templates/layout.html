@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Layout</title>
+
+    </head>
+<body>
+    <div th:fragment = "head">
+        <header>
+            <h1><a href="/" title="Click here to return Home">Welcome to the Moby Dickens Bookstore!</a></h1>
+
+            <p th:if="${#httpServletRequest.remoteUser}" th:inline = "text">
+                [[${#httpServletRequest.remoteUser}]]
+                - <a href="/logout">Logout</a>
+            </p>
+            <p th:unless="${#httpServletRequest.remoteUser}">
+                <a href="/login">Login</a>
+            </p>
+        </header>
+    </div>
+<!--footer-->
+    <div th:fragment = "foot">
+        <footer>
+            <cite>Sphere Scope Productions</cite>
+
+            <ul>
+                <li><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/login">Login</a></li>
+                <li th:if="${#httpServletRequest.remoteUser}"><a href="/admin/books/add">Add Book</a></li>
+                <li th:if="${#httpServletRequest.remoteUser}"><a href="/admin/books/view">view Books</a></li>
+
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
